@@ -1,0 +1,60 @@
+<div class="formbold-main-wrapper">
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <div class="formbold-form-wrapper">
+      <form >
+        <div class="formbold-input-group">
+          <label  class="formbold-form-label"> Nom </label>
+          <input
+            type="text"
+            [(ngModel)]="newContact.nom"
+            name="nom"
+            id="nom"
+            placeholder="Entrer votre nom"
+            class="formbold-form-input"
+          />
+        </div>
+  
+        <div class="formbold-input-group">
+          <label  class="formbold-form-label"> Prenom </label>
+          <input
+            type="text"
+            [(ngModel)]="newContact.prenom"
+            name="prenom"
+            id="prenom"
+            placeholder="Entrer votre Prenom"
+            class="formbold-form-input"
+          />
+        </div>
+        <div class="formbold-input-group">
+          <label  class="formbold-form-label"> Adresse </label>
+          <input
+            type="text"
+            [(ngModel)]="newContact.adresse"
+            name="adresse"
+            id="adresse"
+            placeholder="Entrer votre Adresse"
+            class="formbold-form-input"
+          />
+        </div>
+  
+        <div class="formbold-input-group">
+          <label class="formbold-form-label"> Contact </label>
+          <input
+            type="text"
+            [(ngModel)]="newContact.contact"
+            name="contact"
+            id="contact"
+            placeholder="Entrer votre contact"
+            class="formbold-form-input"
+          />
+        </div>
+  
+       
+        
+  
+        <button *ngIf="!isupdate" class="formbold-btn" (click)="envoyer()">Envoyer</button>
+        <button *ngIf="isupdate" class="formbold-btn" (click)="update()">Mettre a jour</button>
+      </form>
+    </div>
+  </div>

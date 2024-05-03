@@ -1,0 +1,72 @@
+
+/*Formulaire*/
+.f{
+    display: inline-block;
+    text-align: left;
+    width: 20%;
+    }
+
+
+
+.formulaire{
+    width: 50%;
+    font-family: arial;
+    margin: 5px auto;
+    background-color: #F5F5F5;
+    border-radius: 7px;
+
+    padding: 20px;
+}
+
+fieldset {
+    border-radius: 10px;
+
+}
+legend {
+    font-size: 1.3cm;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="number"], input[type="email"]
+{
+    border-radius: 5px;
+    padding: 10px;
+    width: 70%;
+    background-color: #ffff;
+    margin : 10px;
+}
+
+input[type="submit"]
+{
+
+    position: relative;
+    padding: 20px;
+    font-size: 18px;
+    border: 1,2px sodid rgb(24, 24, 24);
+    border-radius: 12px;
+
+}
+
+/*********************************************************/
+.liste {
+
+    border-radius: 3px;
+    width: 80%;
+    margin: 0 auto; /* Marge automatique sur les côtés gauche et droit */
+  display: block;
+
+}
+
+.classButton {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments */
+    justify-content: space-between; /* Répartit l'espace disponible entre les éléments, en les plaçant aux extrémités */
+    margin-top: 10px; /* Marge supérieure pour l'espace entre la liste et les boutons */
+  }
+  
+  .delete {
+    flex-basis: 48%; /* Définit la largeur de chaque bouton à 48% de l'espace disponible */
+  }
+
+  .add {
+    margin-left: auto; /* Aligne la classe add à l'extrême gauche */
+  }

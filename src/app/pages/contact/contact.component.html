@@ -1,0 +1,101 @@
+<div class="body">
+  <!-- 
+
+<div class="formulaire">
+
+  
+
+  <form >
+      <fieldset>
+          <legend>Creer un contact</legend>
+      <label  class="f"> Nom</label><input type="text" name="nom" placeholder="Entrer votre nom" > <br>
+      <label class="f"> Prenom</label><input type="text" name="prenom" placeholder="Entrer votre Prenom"  > <br>
+      <label class="f"> Tel</label><input type="number" name="telephone" placeholder="Entrer votre numero de telephone"  > <br>
+
+      <input type="submit" value="Valider"/>
+
+  </fieldset>
+  </form>
+
+</div> -->
+
+  <div class="liste">
+    <h2>Liste des contact</h2>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+
+      <!-- Checkbox Column -->
+      <!-- <ng-container matColumnDef="select">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-checkbox
+            (change)="$event ? masterToggle() : null"
+            [checked]="selection.hasValue() && isAllSelected()"
+            [indeterminate]="selection.hasValue() && !isAllSelected()"
+          >
+          </mat-checkbox>
+        </th>
+        <td mat-cell *matCellDef="let row">
+          <mat-checkbox
+            (click)="$event.stopPropagation()"
+            (change)="$event ? selection.toggle(row) : null"
+            [checked]="selection.isSelected(row)"
+          >
+          </mat-checkbox>
+        </td>
+      </ng-container> -->
+
+      <!-- Nom Column -->
+      <ng-container matColumnDef="nom">
+        <th mat-header-cell *matHeaderCellDef>Nom</th>
+        <td mat-cell *matCellDef="let element">{{ element.nom }}</td>
+      </ng-container>
+
+      <!-- Prenom Column -->
+      <ng-container matColumnDef="prenom">
+        <th mat-header-cell *matHeaderCellDef>Prénom</th>
+        <td mat-cell *matCellDef="let element">{{ element.prenom }}</td>
+      </ng-container>
+
+      <!-- Contact Column -->
+      <ng-container matColumnDef="contact">
+        <th mat-header-cell *matHeaderCellDef>Contact</th>
+        <td mat-cell *matCellDef="let element">{{ element.contact }}</td>
+      </ng-container>
+
+      <!-- CRUD Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button (click)="editElement(element)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteElement(element.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <div class="classButton">
+      <div class="delete">
+        <!-- <button mat-fab color="warn" aria-label="Delete" (click)="delete()">
+          <mat-icon>delete</mat-icon>
+        </button> -->
+  
+      </div>
+      <div class="add">
+
+        <button mat-raised-button color="primary" (click)="new_contact()">
+          <mat-icon>add</mat-icon>
+          Nouveau Contact
+        </button>
+
+      </div>
+     
+      
+    </div>
+  </div>
+</div>

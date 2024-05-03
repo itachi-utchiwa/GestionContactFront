@@ -1,0 +1,39 @@
+
+<div class="body">
+
+
+    
+    <div class="container">
+        <div class="text">
+           <h1>Inscription</h1>
+        </div>
+        <form >
+           <div class="form-row">
+              <div class="input-data">
+                 <input type="text" [(ngModel)]="user.name" name="nom" required>
+                 <div class="underline"></div>
+                 <label for="">Nom</label>
+              </div>
+              <div class="input-data">
+                 <input type="text" [(ngModel)]="user.password" name="password" required >
+                 <div class="underline"></div>
+                 <label for="">Mot de passe</label>
+              </div>
+           </div>
+           <div class="form-row">
+              <div class="input-data">
+                 <input type="text" [(ngModel)]="user.email" name="email" required minlength="8">
+                 <div class="underline"></div>
+                 <label for="">Email </label>
+              </div> 
+           </div>
+           
+              <div class="form-row submit-btn">
+                 <div class="input-data">
+                    <div class="inner"></div>
+                    <input type="submit" (click)="envoyer()" value="Envoyer">
+                 </div>
+              </div>
+        </form>
+        </div>
+    </div>
